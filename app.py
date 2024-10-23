@@ -1,17 +1,19 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QLabel, QPushButton, QComboBox, QTableWidget, QTableWidgetItem
+#from logic import Logic
+
 
 class MyApp(QWidget):
     def __init__(self):
         super().__init__()
 
         # Инициализация переменных
-        self.wide = ""
-        self.reservoir_temperature_val = ""
-        self.max_product_temperature = ""
-        self.min_environment_temperature = ""
-        self.max_environment_temperature = ""
-        self.truba = ""
+        #self.wide = ""
+        #self.reservoir_temperature_val = ""
+        #self.max_product_temperature = ""
+        #self.min_environment_temperature = ""
+        #self.max_environment_temperature = ""
+        #self.truba = ""
 
         # Новые поля
         self.additional_field1 = QLineEdit()
@@ -261,6 +263,7 @@ class MyApp(QWidget):
         for col in range(18):
             source_value = self.source_data_table.item(0, col).text()
             if source_value.isdigit():
+                #result_value = str(Logic.calc(int(self.wide_line_edit.text()))) 
                 result_value = str(int(source_value) + 777)
             else:
                 result_value = source_value + " + 777"
